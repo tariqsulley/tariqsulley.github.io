@@ -1,65 +1,206 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tariq Sulley</title>
-      <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <style> html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif} </style>
- </head>
-<body class="w3-light-grey">
-  <div class="w3-content w3-margin-top" style="max-width:1400px;">
-    <div class="w3-row-padding">
-      <div class="w3-col" id="construction-add"> </div>
-      <script type="text/babel">
-        class InfoSectionTitleMain extends React.Component {
-          constructor(props){
-            super(props);
-            this.props = props;
-          }
-          render () {
-            const className = `fa fas fa-${this.props.type} fa-fw w3-margin-right w3-xxlarge w3-text-teal`
-            return (
-              <div>
-              <h2 className="w3-text-grey w3-padding-16 w3-jumbo">
-                <i className={className}>
-              </i>{this.props.name}
-              </h2>
-              </div>
-            );
-          }
-        }
-        class UnderConstructionAdd extends React.Component {
-          constructor(props){
-            super(props);
-            this.props = props;
-          }
-          render () {
-            return (
-              <div className="w3-container w3-card w3-white w3-margin-bottom">
-                <InfoSectionTitleMain name="Website Under Construction..To be completed in a long time from now :) " type="code" />
-                <div className="w3-container">
-                  <p className="w3-opacity w3-jumbo"> 
-                      TARIQ(LOL,ME) HAS NOT EVEN STARTED WORKING ON THIS PROJECT </p>
-                 
-                </div>
-              </div>
-            );
-          }
-        }
-        ReactDOM.render(
-            <UnderConstructionAdd />,
-            document.getElementById("construction-add")
-          );
-      </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-    </div>
-  </div>
+	<title>Tariq Sulley</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+               <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+                    <a href="index.html" class="navbar-brand">Tariq Sulley</a>
+               </div>
+
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                         <li><a href="#home" class="smoothScroll">Home</a></li>
+                         <li><a href="#About" class="smoothScroll">About</a></li>
+                         <li><a href="#Work" class="smoothScroll">Work</a></li>
+                         <li><a href="#Contact" class="smoothScroll">Contact Me</a></li>
+                    </ul>
+               </div>
+          </div>
+     </section>
+     <section id="home" >
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-offset-3 col-md-6 col-sm-12">
+                         <div class="home-info">
+                              <h1 id="name">My Name Is Tariq</h1>
+                              <div id="effects">
+                              <span id="target"></span>
+                              <span id="cursor"></span>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h1>Work In Progress Here</h1>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section id="about" >
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-3 col-md-6 col-sm-12">
+                         <div class="section-title">
+                              <h1>Not Much To see here at the moment :)</h1>
+                         </div>
+                    </div>                   
+               </div>
+          </div>
+     </section>
+
+    
+     <footer id="footer" >
+          <div class="container">
+               <div class="row">
+                    <div class="copyright-text col-md-12 col-sm-12">
+                         <div class="col-md-6 col-sm-6">
+                              <p>Copyright &copy; 2020 Tariq</p>
+                         </div>
+                       
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+     <script>      
+     (function ($) {
+    // writes the string
+    //
+    // @param jQuery $target
+    // @param String str
+    // @param Numeric cursor
+    // @param Numeric delay
+    // @param Function cb
+    // @return void
+    function typeString($target, str, cursor, delay, cb) {
+      $target.html(function (_, html) {
+        return html + str[cursor];
+      });
+  
+      if (cursor < str.length - 1) {
+        setTimeout(function () {
+          typeString($target, str, cursor + 1, delay, cb);
+        }, delay);
+      }
+      else {
+        cb();
+      }
+    }
+  
+    // clears the string
+    //
+    // @param jQuery $target
+    // @param Numeric delay
+    // @param Function cb
+    // @return void
+    function deleteString($target, delay, cb) {
+      var length;
+  
+      $target.html(function (_, html) {
+        length = html.length;
+        return html.substr(0, length - 1);
+      });
+  
+      if (length > 1) {
+        setTimeout(function () {
+          deleteString($target, delay, cb);
+        }, delay);
+      }
+      else {
+        cb();
+      }
+    }
+  
+    // jQuery hook
+    $.fn.extend({
+      teletype: function (opts) {
+        var settings = $.extend({}, $.teletype.defaults, opts);
+  
+        return $(this).each(function () {
+          (function loop($tar, idx) {
+            // type
+            typeString($tar, settings.text[idx], 0, settings.delay, function () {
+              // delete
+              setTimeout(function () {
+                deleteString($tar, settings.delay, function () {
+                  loop($tar, (idx + 1) % settings.text.length);
+                });
+              }, settings.pause);
+            });
+  
+          }($(this), 0));
+        });
+      }
+    });
+  
+    // plugin defaults  
+    $.extend({
+      teletype: {
+        defaults: {
+          delay: 20,
+          pause: 2000,
+          text: []
+        }
+      }
+    });
+  }(jQuery));
+  $('#target').teletype({
+    text: [
+    'I am a Programmer',
+    'I am a Web Developer',
+    'I build Cool Stuff'
+    ]
+  });
+  
+  $('#cursor').teletype({
+    text: ['_', ' '],
+    delay: 0,
+    pause: 500
+  });</script>
+       <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
 
 </body>
-</html> 
-
+</html>
