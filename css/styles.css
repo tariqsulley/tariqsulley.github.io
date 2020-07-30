@@ -316,6 +316,12 @@
     color: #ffffff;
   }
 
+  #map{
+    width: .1px;
+    height: .1px;
+    display: none;
+    visibility: hidden;
+  }
   @media only screen and (max-width: 1200px) {
 
     .custom-navbar .navbar-nav {
